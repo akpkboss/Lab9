@@ -29,8 +29,8 @@ public class EmployeeDatabase {
 
     /**
      * Returns the manager for the given employee.
-     *
-     * @param employee
+     * things and stuff.
+     * @param employee stuff.
      * @return
      */
     Employee findManager(final Employee employee) {
@@ -56,6 +56,13 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        for (int i = 0; ; i++) {
+            findManager(employee);
+            if (findManager(employee).equals(employee)) {
+                return i;
+            }
+        }
+
     }
 
     /**
@@ -70,6 +77,11 @@ public class EmployeeDatabase {
         /*
          * Implement this function
          */
+        int count = 0;
+        for (int i = employees.size() - 1; i > 0; i--) {
+            count++;
+        }
+        return count;
     }
 
     /**
